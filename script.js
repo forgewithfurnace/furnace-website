@@ -5,18 +5,48 @@ async function loadMediumPosts() {
     const blogContainer = document.getElementById('blog-posts');
     
     try {
-        // Use rss2json API to fetch Medium RSS feed
-        const MEDIUM_RSS = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@forgewithfurnace';
-        
-        const response = await fetch(MEDIUM_RSS);
-        const data = await response.json();
-        
-        if (data.status !== 'ok') {
-            throw new Error('Failed to fetch Medium posts');
+        // Try multiple RSS-to-JSON services for reliability
+        const MEDIUM_USER = '@forgewithfurnace';
+        const feedUrl = encodeURIComponent(`https://medium.com/feed/${MEDIUM_USER}`);
+        const apis = [
+            `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/${MEDIUM_USER}`,
+            `https://api.allorigins.win/raw?url=${feedUrl}`
+        ];
+
+        let posts = null;
+
+        // Try rss2json first
+        try {
+            const response = await fetch(apis[0]);
+            const data = await response.json();
+            if (data.status === 'ok' && data.items && data.items.length > 0) {
+                posts = data.items.slice(0, 5);
+            }
+        } catch (e) {
+            console.warn('rss2json failed, trying fallback...', e);
         }
-        
-        // Get posts (limit to 5 most recent)
-        const posts = data.items.slice(0, 5);
+
+        // Fallback: parse RSS XML via allorigins proxy
+        if (!posts) {
+            const response = await fetch(apis[1]);
+            const text = await response.text();
+            const parser = new DOMParser();
+            const xml = parser.parseFromString(text, 'text/xml');
+            const items = xml.querySelectorAll('item');
+            if (items.length > 0) {
+                posts = Array.from(items).slice(0, 5).map(item => ({
+                    title: item.querySelector('title')?.textContent || '',
+                    link: item.querySelector('link')?.textContent || '',
+                    pubDate: item.querySelector('pubDate')?.textContent || '',
+                    author: item.querySelector('dc\\:creator, creator')?.textContent || MEDIUM_USER,
+                    description: item.querySelector('description')?.textContent || ''
+                }));
+            }
+        }
+
+        if (!posts || posts.length === 0) {
+            throw new Error('No posts found');
+        }
         
         if (posts.length === 0) {
             blogContainer.innerHTML = '<p class="blog-loading">No posts yet. Check back soon!</p>';
