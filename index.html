@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FURNACE - AI Coding with Persistent Memory</title>
+    <meta name="description" content="FURNACE solves AI amnesia. Build code that remembers your patterns forever through a persistent knowledge graph.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="furnace_image.jpg" alt="FURNACE" class="logo-img">
+                <span class="logo-text">FURNACE</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#blog">Blog</a>
+                <a href="https://github.com/yourusername/furnace" target="_blank">GitHub</a>
+                <a href="#download" class="cta-button">Download</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-content">
+            <img src="furnace_image.jpg" alt="FURNACE Logo" class="hero-logo">
+            <h1 class="hero-title">
+                <span class="fire-text">AI CODING</span>
+                <span class="ice-text">WITH MEMORY</span>
+            </h1>
+            <p class="hero-subtitle">
+                Stop re-teaching AI your patterns every session.<br>
+                FURNACE remembers forever.
+            </p>
+            <div class="hero-cta">
+                <a href="#download" class="btn-primary">
+                    <span>Get Started</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M4 10h12m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </a>
+                <a href="https://medium.com/@forgewithfurnace" target="_blank" class="btn-secondary">Read the Story</a>
+            </div>
+        </div>
+        <div class="hero-particles"></div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="container">
+            <div class="problem-grid">
+                <div class="problem-text">
+                    <h2 class="section-title">The Problem</h2>
+                    <h3 class="problem-headline">AI coding assistants have amnesia</h3>
+                    <p>
+                        You teach them your error handling patterns.<br>
+                        Your naming conventions.<br>
+                        Your architecture decisions.
+                    </p>
+                    <p class="problem-emphasis">
+                        Next session? They've forgotten everything.
+                    </p>
+                </div>
+                <div class="problem-visual">
+                    <div class="amnesia-demo">
+                        <div class="session">
+                            <span class="session-label">Session 1</span>
+                            <div class="knowledge-bar" style="--width: 100%"></div>
+                        </div>
+                        <div class="session">
+                            <span class="session-label">Session 2</span>
+                            <div class="knowledge-bar" style="--width: 0%"></div>
+                        </div>
+                        <div class="session">
+                            <span class="session-label">Session 3</span>
+                            <div class="knowledge-bar" style="--width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution">
+        <div class="container">
+            <h2 class="section-title">The Solution</h2>
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <div class="card-icon fire-icon">🔥</div>
+                    <h3>Persistent Memory</h3>
+                    <p>Knowledge graph captures YOUR coding DNA once, remembers forever.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="card-icon ice-icon">❄️</div>
+                    <h3>Multi-Agent Validation</h3>
+                    <p>Gandalf, Morpheus, Gimli, Trinity validate before you see the code.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="card-icon fire-icon">⚡</div>
+                    <h3>Auto-Optimization</h3>
+                    <p>Scales to 100K+ files with graph pruning and incremental indexing.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="card-icon ice-icon">🧠</div>
+                    <h3>CodeBERT Integration</h3>
+                    <p>Semantic search finds patterns beyond keyword matching.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">What It Remembers</h2>
+            <div class="features-list">
+                <div class="feature-item">
+                    <span class="feature-icon">→</span>
+                    <span class="feature-text">Error handling patterns</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">→</span>
+                    <span class="feature-text">Naming conventions</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">→</span>
+                    <span class="feature-text">Architecture decisions</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">→</span>
+                    <span class="feature-text">Code style preferences</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">→</span>
+                    <span class="feature-text">Team policies & constraints</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">→</span>
+                    <span class="feature-text">Your entire codebase context</span>
+                </div>
+            </div>
+
+            <div class="tech-stack">
+                <h3>Built With</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">Rust</span>
+                    <span class="tech-tag">KuzuDB</span>
+                    <span class="tech-tag">LanceDB</span>
+                    <span class="tech-tag">SQLite</span>
+                    <span class="tech-tag">CodeBERT</span>
+                    <span class="tech-tag">Tree-sitter</span>
+                    <span class="tech-tag">MCP Protocol</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2 class="section-title">From the Forge</h2>
+            <div id="blog-posts" class="blog-grid">
+                <div class="blog-loading">Loading posts...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="download-glow"></div>
+        <div class="container">
+            <h2 class="section-title">Get FURNACE</h2>
+            <p class="download-subtitle">Single binary. Zero dependencies. Works with any LLM.</p>
+            <div class="download-options">
+                <a href="https://github.com/yourusername/furnace/releases" class="download-btn" target="_blank">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="2"/>
+                        <path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    Download for macOS
+                </a>
+                <a href="https://github.com/yourusername/furnace/releases" class="download-btn" target="_blank">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="2"/>
+                        <path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    Download for Linux
+                </a>
+                <a href="https://github.com/yourusername/furnace/releases" class="download-btn" target="_blank">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="2"/>
+                        <path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    Download for Windows
+                </a>
+            </div>
+            <p class="install-command">
+                <code>cargo install furnace</code>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="furnace_image.jpg" alt="FURNACE">
+                    <span>FURNACE</span>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/yourusername/furnace" target="_blank">GitHub</a>
+                    <a href="https://medium.com/@forgewithfurnace" target="_blank">Blog</a>
+                    <a href="mailto:contact@forgewithfurnace.com">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Built with 🔥 and ❄️ by the FURNACE team</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
