@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;600;700;900&family=Google+Sans+Mono:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -18,6 +19,9 @@
                 <img src="furnace_image.jpg" alt="FURNACE" class="logo-img">
                 <span class="logo-text">FURNACE</span>
             </div>
+            <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </button>
             <div class="nav-links">
                 <a href="#features">Features</a>
                 <a href="#blog">Blog</a>
